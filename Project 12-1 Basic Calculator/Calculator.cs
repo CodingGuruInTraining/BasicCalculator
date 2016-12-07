@@ -12,7 +12,7 @@ namespace Project_12_1_Basic_Calculator
         // Declares variables
         //private decimal input;
         //private List<decimal> inputs = new List<decimal>();
-        private byte oper;      // 1 = ADD; 2 = SUBTRACT; 3 = MULTIPLY; 4 = DIVIDE
+        private byte oper;      
         private decimal total;
         private decimal[] values;
         public bool newInputs;
@@ -72,6 +72,7 @@ namespace Project_12_1_Basic_Calculator
             values[1] = value;
             switch (oper)
             {
+                // 1 = ADD; 2 = SUBTRACT; 3 = MULTIPLY; 4 = DIVIDE
                 case 1:
                     total = values[0] + values[1];
                     break;

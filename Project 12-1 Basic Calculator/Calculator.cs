@@ -9,8 +9,9 @@ namespace Project_12_1_Basic_Calculator
 {
     class Calculator
     {
+        // Declares variables
         //private decimal input;
-        private List<decimal> inputs = new List<decimal>();
+        //private List<decimal> inputs = new List<decimal>();
         private byte oper;      // 1 = ADD; 2 = SUBTRACT; 3 = MULTIPLY; 4 = DIVIDE
         private decimal total;
         private decimal[] values;
@@ -21,6 +22,7 @@ namespace Project_12_1_Basic_Calculator
 
         public Calculator()
         {
+            // Creates array to hold inputs
             values = new decimal[2];
         }
 
@@ -42,26 +44,31 @@ namespace Project_12_1_Basic_Calculator
         ////}
         public void Add(decimal value)
         {
+            // Saves passed value as first input and sets operator variable
             values[0] = value;
             oper = 1;
         }
         public void Subtract(decimal value)
         {
+            // Saves passed value as first input and sets operator variable
             values[0] = value;
             oper = 2;
         }
         public void Multiply(decimal value)
         {
+            // Saves passed value as first input and sets operator variable
             values[0] = value;
             oper = 3;
         }
         public void Divide(decimal value)
         {
+            // Saves passed value as first input and sets operator variable
             values[0] = value;
             oper = 4;
         }
         public decimal Equals(decimal value)
         {
+            // Saves passed value as second input and determines what action to take
             values[1] = value;
             switch (oper)
             {
@@ -84,18 +91,22 @@ namespace Project_12_1_Basic_Calculator
         }
         public decimal Reciprocal(decimal value)
         {
+            // Returns reciprocal calculation
             return 1 / value;
         }
         public decimal SquareRoot(decimal value)
         {
+            // Returns square root calculation
             return (decimal)Math.Sqrt((double)value);
         }
         public void Clear()
         {
+            // Clears stored array
             Array.Clear(values, 0, values.Length);
         }
         public bool isNumeric(string input)
         {
+            // Validates inputs
             decimal number = 0m;
             if (Decimal.TryParse(input, out number))
                 return true;
